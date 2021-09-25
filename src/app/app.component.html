@@ -528,10 +528,10 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-card>
-      <mat-card-title>Titolo</mat-card-title>
+    <mat-card *ngFor="let t of tasks.tasks">
+      <mat-card-title>{{t.title}}</mat-card-title>
       <mat-card-subtitle>Sottotitolo</mat-card-subtitle>
-      <mat-card-content>Contenuto</mat-card-content>
+      <mat-card-content>{{t.relatedTo.title}}</mat-card-content>
       <mat-card-actions>
       </mat-card-actions>
       <mat-card-footer>Footer</mat-card-footer>
