@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Group Task</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="User Menu" [matMenuTriggerFor]="appMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+      <button mat-icon-button class="example-icon" aria-label="Label">
+        <mat-icon>settings</mat-icon>
+        <span>Impostazioni</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+  
+  <mat-sidenav-container class="container">
+    <mat-sidenav mode="side" #sidenav class="sidenav">
+      <mat-toolbar color="primary">
+        <span>Menu</span>
+      </mat-toolbar>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon color="primary">task</mat-icon>
+          Le mie task
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon color="primary">calendar_view_week</mat-icon>
+          Ispeziona GANTT
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon color="warn">sync_problem</mat-icon>
+          Segnala un problema
+        </mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+      <mat-card *ngFor="let t of tasks.tasks">
+        <mat-card-title>{{t.title}}</mat-card-title>
+        <mat-card-subtitle>Sottotitolo</mat-card-subtitle>
+        <mat-card-content>{{t.relatedTo.title}}</mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+        <mat-card-footer>Footer</mat-card-footer>
+      </mat-card>
+  
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
