@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
-import {
-  MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarVerticalPosition,
-} from '@angular/material/snack-bar';
+import {MatSnackBar,} from '@angular/material/snack-bar';
+import {UserType} from "../model/usertype.model";
 
 @Component({
   selector: 'app-root',
@@ -23,8 +20,9 @@ export class AppComponent {
   emailFormControl = new FormControl('', [Validators.required, Validators.email,]);
   passwordControl = new FormControl('', [Validators.required])
   hide: boolean = true;
-  grado:any
-utenti= [{email:"admin@gmail.com",password:"password",grado:"1"},{email:"utente@gmail.com",password:"password",grado:"2"}]
+  grado:any;
+  utenti= [{email:"admin@gmail.com",password:"password",grado:UserType.ADMIN},{email:"utente@gmail.com",password:"password",grado:UserType.EXECUTOR}];
+
   constructor(private _snackBar: MatSnackBar) {
 
   }
@@ -59,7 +57,7 @@ utenti= [{email:"admin@gmail.com",password:"password",grado:"1"},{email:"utente@
         this.login=true
       }
     });
-   
+
     //chiama servizio con oggetto log inserire nel caso di true this.login =true; in caso di false prevedere
     //un messaggio di errore
   }
