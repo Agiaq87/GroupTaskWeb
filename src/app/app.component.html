@@ -1,13 +1,10 @@
 <div *ngIf="!login">
 <mat-grid-list cols="3" rowHeight="2:1">
   <mat-grid-tile></mat-grid-tile>
-  <mat-grid-tile> <div style="display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    align-items:center;">
+  <mat-grid-tile>
+    <div class="grid-title">
     GROUP TASK WEB LOGIN
-    <img style="height:100px; width: 100px; margin-top: 10px;"src="/assets/1.png">
+      <img class="logo" src="/assets/1.png">
     </div>
   </mat-grid-tile>
   <mat-grid-tile></mat-grid-tile>
@@ -15,10 +12,7 @@
 <mat-grid-list cols="3" rowHeight="2:2">
   <mat-grid-tile></mat-grid-tile>
   <mat-grid-tile >
-    <div style="display:flex;
-    flex-direction:column;
-    justify-content:center;
-    text-align:center;">
+    <div class="grid-title">
     <form class="example-form">
   <mat-form-field class="example-full-width" appearance="fill">
     <mat-label>Email</mat-label>

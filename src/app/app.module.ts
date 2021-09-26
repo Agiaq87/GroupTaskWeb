@@ -19,6 +19,7 @@ import { HomeModule } from './home/home.module';
 import {MatGridListModule} from '@angular/material/grid-list'
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     ReactiveFormsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressBarModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
