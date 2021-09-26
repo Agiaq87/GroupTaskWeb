@@ -23,8 +23,8 @@ export class AppComponent {
   emailFormControl = new FormControl('', [Validators.required, Validators.email,]);
   passwordControl = new FormControl('', [Validators.required])
   hide: boolean = true;
-
-
+  grado:any
+utenti= [{email:"admin@gmail.com",password:"password",grado:"1"},{email:"utente@gmail.com",password:"password",grado:"2"}]
   constructor(private _snackBar: MatSnackBar) {
 
   }
@@ -51,9 +51,15 @@ export class AppComponent {
     console.log(this.emailFormControl.value)
   let log = {
       email:this.emailFormControl.value,
-      password:this.emailFormControl.value
+      password:this.passwordControl.value
     }
-    this.login=true;
+    this.utenti.forEach(element => {
+      if(element.email==log.email && element.password==log.password){
+        this.grado=element.grado
+        this.login=true
+      }
+    });
+   
     //chiama servizio con oggetto log inserire nel caso di true this.login =true; in caso di false prevedere
     //un messaggio di errore
   }

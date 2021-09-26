@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { homeRoutingModule } from './home-routing.module';
+import { LoadingRoutingModule } from './loading-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
@@ -12,15 +12,18 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatMenuModule} from "@angular/material/menu";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { HomeComponent } from './home.component';
+import { LoadingComponent } from './loading.component';
+import { HomeComponent } from '../home/home.component';
+
 
 @NgModule({
   declarations: [
-    HomeComponent,
+   LoadingComponent,
+   HomeComponent,
   ],
   imports: [
     BrowserModule,
-    homeRoutingModule,
+    LoadingRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
@@ -33,10 +36,10 @@ import { HomeComponent } from './home.component';
     MatMenuModule,
     HttpClientModule
   ],
-  exports:[HomeComponent],
+  exports:[LoadingComponent],
 
   providers: [HttpClient],
-  bootstrap: [HomeComponent]
+  bootstrap: [LoadingComponent]
 })
 
-export class HomeModule { }
+export class LoadingModule { }

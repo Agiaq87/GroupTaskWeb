@@ -15,15 +15,17 @@ import {MatButtonToggleModule} from "@angular/material/button-toggle";
 import {MatMenuModule} from "@angular/material/menu";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
-import { HomeModule } from './home/home.module';
 import {MatGridListModule} from '@angular/material/grid-list'
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import { LoadingRoutingModule } from './loading/loading-routing.module';
+import { LoadingModule } from './loading/loading.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoadingComponent,
+ 
 
   ],
   imports: [
@@ -37,13 +39,14 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatButtonToggleModule,
     MatMenuModule,
     HttpClientModule,
-    HomeModule,
     MatGridListModule,
     MatInputModule,
     ReactiveFormsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    BrowserAnimationsModule,
+    LoadingModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

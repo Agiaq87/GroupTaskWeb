@@ -52,3 +52,10 @@
 </mat-grid-list>
 </div>
 
+
+
+<div  *ngIf="login" >
+  <!-- [LoginResult]="loginResult" routerLink="/home"-->
+  <app-loading [grado]="grado"></app-loading> 
+ <!-- <router-outlet></router-outlet> -->
+</div>
