@@ -12,7 +12,7 @@ export class LoadingComponent implements OnInit {
   ngOnInit(): void {
     switch (this.grado) {
       case "0":{
-       
+       // /home/grado0
         break;
     }
     case"1":{

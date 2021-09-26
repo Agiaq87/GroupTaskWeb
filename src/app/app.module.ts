@@ -21,6 +21,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import { LoadingRoutingModule } from './loading/loading-routing.module';
 import { LoadingModule } from './loading/loading.module';
 
+import {MatProgressBarModule} from "@angular/material/progress-bar";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { LoadingModule } from './loading/loading.module';
     MatSidenavModule,
     MatSnackBarModule,
     BrowserAnimationsModule,
-    LoadingModule
+    LoadingModule,
+    MatProgressBarModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
