@@ -14,6 +14,7 @@ import {MatMenuModule} from "@angular/material/menu";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LoadingComponent } from './loading.component';
 import { HomeComponent } from '../home/home.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { HomeComponent } from '../home/home.component';
     MatCardModule,
     MatButtonToggleModule,
     MatMenuModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule
   ],
   exports:[LoadingComponent],
 
