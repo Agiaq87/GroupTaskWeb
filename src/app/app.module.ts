@@ -12,17 +12,19 @@ import {FormsModule ,ReactiveFormsModule} from "@angular/forms";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
-import {MatMenuModule} from "@angular/material/menu"; 
+import {MatMenuModule} from "@angular/material/menu";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LoadingComponent } from './loading/loading.component';
 import { HomeModule } from './home/home.module';
 import {MatGridListModule} from '@angular/material/grid-list'
 import {MatInputModule} from '@angular/material/input';
-@NgModule({ 
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+
+@NgModule({
   declarations: [
     AppComponent,
     LoadingComponent,
-  
+
   ],
   imports: [
     BrowserModule,
@@ -38,9 +40,13 @@ import {MatInputModule} from '@angular/material/input';
     HomeModule,
     MatGridListModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatSnackBarModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

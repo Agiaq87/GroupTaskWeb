@@ -10,11 +10,11 @@ import {FormsModule} from "@angular/forms";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import {MatButtonToggleModule} from "@angular/material/button-toggle";
-import {MatMenuModule} from "@angular/material/menu"; 
+import {MatMenuModule} from "@angular/material/menu";
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home.component';
- 
-@NgModule({ 
+
+@NgModule({
   declarations: [
     HomeComponent,
   ],
@@ -38,4 +38,5 @@ import { HomeComponent } from './home.component';
   providers: [HttpClient],
   bootstrap: [HomeComponent]
 })
+
 export class HomeModule { }
